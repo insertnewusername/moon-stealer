@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://yrhvrq3x6b6s"]
 
+[ext_resource type="Texture2D" uid="uid://wolwxt35b3o7" path="res://assets/level1bg.jpg" id="1_jwv3a"]
+
 [node name="Node2D" type="Node2D" unique_id=1919603811]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1497919598]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=554241280]
+anchors_preset = -1
+anchor_left = -0.00086805556
+anchor_top = -0.043209877
+anchor_right = 0.33333334
+anchor_bottom = 1.0046296
+texture = ExtResource("1_jwv3a")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
