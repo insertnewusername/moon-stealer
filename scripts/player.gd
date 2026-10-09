@@ -14,12 +14,14 @@ func _ready():
 	
 func _physics_process(delta: float) -> void:
 	
-	if Input.is_action_just_pressed("attack") and not attack:
-		attack = true
-		animated_sprite_2d.play("fight")
+
 		
 	if !alive:
 		return
+		
+	if Input.is_action_just_pressed("attack") and not attack:
+		attack = true
+		animated_sprite_2d.play("fight")
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -72,6 +74,7 @@ func _on_animation_finished():
 		attack = false
 		
 func respawn():	
+	alive = true
 	global_position = Vector2(-346, 616)
 	animated_sprite_2d.play("default")
 	
