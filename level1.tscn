@@ -1777,7 +1777,7 @@ volume_db = 2.93
 [node name="blobs" type="Node2D" parent="." unique_id=1145020776]
 
 [node name="bug1" parent="blobs" unique_id=871288592 instance=ExtResource("36_xhed0")]
-position = Vector2(228, 456)
+position = Vector2(289, 457.00003)
 scale = Vector2(3.320005, 3.320005)
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
