@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c311jt5lmig7g"]
 
 [ext_resource type="Texture2D" uid="uid://tm3cvkgngi3f" path="res://assets/star.png" id="1_51njk"]
+[ext_resource type="Script" uid="uid://ch8stj82yq110" path="res://scripts/star.gd" id="1_lt43v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lt43v"]
 radius = 61.073727
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=600971591]
+[node name="StaticBody2D" type="Area2D" unique_id=427715207]
+script = ExtResource("1_lt43v")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=32510415]
 position = Vector2(113, 534)
@@ -15,3 +17,5 @@ texture = ExtResource("1_51njk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1365429586]
 position = Vector2(103, 528)
 shape = SubResource("CircleShape2D_lt43v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
