@@ -1,7 +1,81 @@
 [gd_scene format=3 uid="uid://dv3wohrumkbux"]
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=871288592]
+[ext_resource type="Texture2D" uid="uid://bpgnie7nxo12r" path="res://assets/slime_green.png" id="1_3i5g7"]
+[ext_resource type="Script" uid="uid://b0maawe0ouje4" path="res://scripts/enemy_1.gd" id="1_eu05t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu05t"]
+atlas = ExtResource("1_3i5g7")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxj83"]
+atlas = ExtResource("1_3i5g7")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qctpr"]
+atlas = ExtResource("1_3i5g7")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2opxl"]
+atlas = ExtResource("1_3i5g7")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyd71"]
+atlas = ExtResource("1_3i5g7")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0fst"]
+atlas = ExtResource("1_3i5g7")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcf7i"]
+atlas = ExtResource("1_3i5g7")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjgij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu05t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxj83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qctpr")
+}],
+"loop": true,
+"name": &"ded",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2opxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyd71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0fst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcf7i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pj218"]
+size = Vector2(14, 12)
+
+[node name="bug1" type="StaticBody2D" unique_id=871288592]
+script = ExtResource("1_eu05t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=806686162]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_vjgij")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=694895554]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_pj218")
