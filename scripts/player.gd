@@ -7,12 +7,17 @@ const JUMP_VELOCITY = -400.0
 var jump = false
 var stars = 0
 var alive = true
-
+var attack = false
 
 func _ready():
 	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
 	
 func _physics_process(delta: float) -> void:
+	
+	if Input.is_action_just_pressed("attack") and not attack:
+		attack = true
+		animated_sprite_2d.play("fight")
+		
 	if !alive:
 		return
 	
@@ -37,17 +42,20 @@ func _physics_process(delta: float) -> void:
 	
 
 	# Animation Logic
-	if not is_on_floor():
-		if jump==true: #if not playing jump 
+	if not attack:
+		if not is_on_floor():
 			if animated_sprite_2d.animation != "jump":
 				animated_sprite_2d.play("jump")
-	elif direction != 0:
-		animated_sprite_2d.play("walk")
-	else:
-		animated_sprite_2d.play("default")
+		elif direction != 0:
+			animated_sprite_2d.play("walk")
+		else:
+			animated_sprite_2d.play("default")
 
+
+	
 	move_and_slide()
-
+	
+	
 
 func score():
 	stars = stars+1
@@ -60,6 +68,8 @@ func die():
 func _on_animation_finished():
 	if animated_sprite_2d.animation == "ded":
 		respawn()
+	elif animated_sprite_2d.animation == "fight":
+		attack = false
 		
 func respawn():	
 	global_position = Vector2(-346, 616)
