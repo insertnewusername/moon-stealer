@@ -6,8 +6,16 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var jump = false
 var stars = 0
+var alive = true
 
+
+func _ready():
+	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
+	
 func _physics_process(delta: float) -> void:
+	if !alive:
+		return
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -44,3 +52,16 @@ func _physics_process(delta: float) -> void:
 func score():
 	stars = stars+1
 	print(stars)
+	
+func die():
+	alive = false
+	animated_sprite_2d.play("ded")
+	
+func _on_animation_finished():
+	if animated_sprite_2d.animation == "ded":
+		respawn()
+		
+func respawn():	
+	global_position = Vector2(-346, 616)
+	animated_sprite_2d.play("default")
+	

@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://c0d48efnx425b" path="res://assets/PNG/Platfromer/Crystal_Caves_Forest_2D_Platformer_Tileset_Platformer - Stone.png" id="31_pilen"]
 [ext_resource type="Texture2D" uid="uid://bowx0573mbdlj" path="res://assets/PNG/Platfromer/Crystal_Caves_Forest_2D_Platformer_Tileset_Platformer - Wooden Barrel.png" id="32_8ywnu"]
 [ext_resource type="Texture2D" uid="uid://c0ktdbq77lbi4" path="res://assets/PNG/Platfromer/Crystal_Caves_Forest_2D_Platformer_Tileset_Platformer - Wooden Box.png" id="33_35yik"]
+[ext_resource type="PackedScene" uid="uid://dv3wohrumkbux" path="res://sprites/enemy1.tscn" id="36_xhed0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mkgpj"]
 texture = ExtResource("4_t8chk")
@@ -1772,5 +1773,11 @@ scale = Vector2(0.28028435, 0.28028435)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=607411747]
 stream = ExtResource("6_crycw")
 volume_db = 2.93
+
+[node name="blobs" type="Node2D" parent="." unique_id=1145020776]
+
+[node name="bug1" parent="blobs" unique_id=871288592 instance=ExtResource("36_xhed0")]
+position = Vector2(228, 456)
+scale = Vector2(3.320005, 3.320005)
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
