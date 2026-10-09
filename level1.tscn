@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://xk2c728rqhna" path="res://scripts/level_1.gd" id="1_v38iq"]
 [ext_resource type="Texture2D" uid="uid://d1jmh1wupy5ww" path="res://assets/TwilightVillage_RPG_Tileset.png" id="2_dopym"]
 [ext_resource type="PackedScene" uid="uid://c311jt5lmig7g" path="res://sprites/star.tscn" id="5_v8kj3"]
+[ext_resource type="AudioStream" uid="uid://def0kxq6xbu5t" path="res://assets/bgmusic.mp3" id="6_crycw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ootpb"]
 texture = ExtResource("2_dopym")
@@ -2645,3 +2646,9 @@ tile_set = SubResource("TileSet_v38iq")
 [node name="star" parent="stars" unique_id=427715207 instance=ExtResource("5_v8kj3")]
 position = Vector2(1017, 619.00006)
 scale = Vector2(0.28028435, 0.28028435)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=607411747]
+stream = ExtResource("6_crycw")
+volume_db = 2.93
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
