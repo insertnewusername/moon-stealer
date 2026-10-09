@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://yrhvrq3x6b6s"]
+[gd_scene format=4 uid="uid://yrhvrq3x6b6s"]
 
 [ext_resource type="Texture2D" uid="uid://wolwxt35b3o7" path="res://assets/level1bg.jpg" id="1_jwv3a"]
+[ext_resource type="PackedScene" uid="uid://bh7le5llsw0fw" path="res://sprites/player.tscn" id="1_ootpb"]
 [ext_resource type="Texture2D" uid="uid://d1jmh1wupy5ww" path="res://assets/TwilightVillage_RPG_Tileset.png" id="2_dopym"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ootpb"]
@@ -2080,18 +2081,15 @@ sources/0 = SubResource("TileSetAtlasSource_ootpb")
 
 [node name="Node2D" type="Node2D" unique_id=1919603811]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1497919598]
+[node name="CharacterBody2D" parent="." unique_id=1688579368 instance=ExtResource("1_ootpb")]
+z_index = 100
+position = Vector2(20, 627)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=554241280]
-anchors_preset = -1
-anchor_left = -0.00086805556
-anchor_top = -0.043209877
-anchor_right = 0.33333334
-anchor_bottom = 1.0046296
-texture = ExtResource("1_jwv3a")
-expand_mode = 1
-stretch_mode = 4
-metadata/_edit_use_anchors_ = true
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=441707669]
+limit_left = -20
+limit_top = -511
+limit_right = 396
+limit_bottom = 659
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1242276549]
 tile_set = SubResource("TileSet_v38iq")
@@ -2101,4 +2099,21 @@ layer_1/name = "Physics Layer 0"
 layer_1/enabled = false
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMap" unique_id=941097287]
+tile_map_data = PackedByteArray("AAD//+//AAALACYAAAD//+7/AAALACYAAAD//+3/AAALACYAAAD//+z/AAALACYAAAD//+v/AAALACYAAAAYAO//AAALACYAAAAYAO7/AAALACYAAAAYAO3/AAALACYAAAAYAOz/AAALACYAAAAYAOv/AAALACYAAAAYAOr/AAALACYAAAAYAOn/AAALACYAAAAYAOj/AAALACYAAAAYAOf/AAALACYAAAAYAOb/AAALACYAAAAYAOX/AAALACYAAAAYAOT/AAALACYAAAAYAOP/AAALACYAAAAYAOL/AAALACYAAAAYAOH/AAALACYAAAD//+r/AAALACYAAAD//+n/AAALACYAAAD//+j/AAALACYAAAD//+f/AAALACYAAAD//+b/AAALACYAAAD//+X/AAALACYAAAD//+T/AAALACYAAAD//+P/AAALACYAAAD//+L/AAALACYAAAD//+H/AAALACYAAAD//+D/AAALACYAAAAAAOD/AAALACYAAAABAOD/AAALACYAAAACAOD/AAALACYAAAADAOD/AAALACYAAAAEAOD/AAALACYAAAAFAOD/AAALACYAAAAGAOD/AAALACYAAAAHAOD/AAALACYAAAAIAOD/AAALACYAAAAJAOD/AAALACYAAAAKAOD/AAALACYAAAALAOD/AAALACYAAAAMAOD/AAALACYAAAANAOD/AAALACYAAAAOAOD/AAALACYAAAAPAOD/AAALACYAAAAQAOD/AAALACYAAAARAOD/AAALACYAAAASAOD/AAALACYAAAATAOD/AAALACYAAAAUAOD/AAALACYAAAAVAOD/AAALACYAAAAWAOD/AAALACYAAAAXAOD/AAALACYAAAAYAOD/AAALACYAAAA=")
 tile_set = SubResource("TileSet_v38iq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="TileMap" unique_id=1497919598]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="TileMap/CanvasLayer" unique_id=554241280]
+modulate = Color(1, 1, 1, 0.3254902)
+z_index = -1
+anchors_preset = -1
+anchor_left = -0.00086805556
+anchor_top = -0.043209877
+anchor_right = 0.33333334
+anchor_bottom = 1.0046296
+texture = ExtResource("1_jwv3a")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
