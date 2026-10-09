@@ -1,4 +1,5 @@
 extends Area2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,3 +15,8 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		body.score()
+		call_deferred("disable_collision")
+		
+func disable_collision() -> void:
+	collision_shape_2d.disabled = true
+	queue_free()
