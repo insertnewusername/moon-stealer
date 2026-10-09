@@ -2642,6 +2642,6 @@ tile_set = SubResource("TileSet_v38iq")
 
 [node name="stars" type="Node2D" parent="." unique_id=591725135]
 
-[node name="StaticBody2D" parent="stars" unique_id=427715207 instance=ExtResource("5_v8kj3")]
+[node name="star" parent="stars" unique_id=427715207 instance=ExtResource("5_v8kj3")]
 position = Vector2(1017, 619.00006)
 scale = Vector2(0.28028435, 0.28028435)
