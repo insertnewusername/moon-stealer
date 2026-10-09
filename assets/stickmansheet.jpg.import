@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyua2mqk5nqya"
-path="res://.godot/imported/sprite.jpg-7218e060e956a37fa35999dca0a2e9dc.ctex"
+uid="uid://cndfi1neg7vqk"
+path="res://.godot/imported/stickmansheet.jpg-2b93dfc90a1d48f7b2c6e0eb627f8435.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite.jpg"
-dest_files=["res://.godot/imported/sprite.jpg-7218e060e956a37fa35999dca0a2e9dc.ctex"]
+source_file="res://assets/stickmansheet.jpg"
+dest_files=["res://.godot/imported/stickmansheet.jpg-2b93dfc90a1d48f7b2c6e0eb627f8435.ctex"]
 
 [params]
 
