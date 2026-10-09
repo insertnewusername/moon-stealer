@@ -19,6 +19,38 @@ region = Rect2(672, 0, 148, 200)
 atlas = ExtResource("1_wf2ox")
 region = Rect2(840, 0, 148, 200)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7aqk"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(336, 200, 148, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udifs"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(504, 200, 148, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpba7"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(672, 200, 148, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43tkh"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(840, 200, 148, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w51jo"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(1008, 200, 148, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii58a"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(1176, 200, 148, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvg7m"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(1344, 200, 148, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s5qv"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(1512, 200, 148, 200)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_k7aqk"]
 animations = [{
 "frames": [{
@@ -37,6 +69,35 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7aqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udifs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpba7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43tkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w51jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii58a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvg7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s5qv")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udifs"]
@@ -49,7 +110,8 @@ script = ExtResource("1_8yuya")
 position = Vector2(-9.536743e-07, -12.000001)
 scale = Vector2(0.11824323, 0.12065347)
 sprite_frames = SubResource("SpriteFrames_k7aqk")
-frame_progress = 0.22526477
+animation = &"walk"
+autoplay = "default"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1294488724]
 

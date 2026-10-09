@@ -2109,9 +2109,9 @@ position = Vector2(53.999996, 773)
 scale = Vector2(5, 5)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=441707669]
-limit_left = -396
-limit_top = -971
-limit_right = 756
+limit_left = -403
+limit_top = -961
+limit_right = 780
 limit_bottom = 659
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1242276549]
