@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://wolwxt35b3o7" path="res://assets/level1bg.jpg" id="1_jwv3a"]
 [ext_resource type="PackedScene" uid="uid://bh7le5llsw0fw" path="res://sprites/player.tscn" id="1_ootpb"]
+[ext_resource type="Script" uid="uid://xk2c728rqhna" path="res://scripts/level_1.gd" id="1_v38iq"]
 [ext_resource type="Texture2D" uid="uid://d1jmh1wupy5ww" path="res://assets/TwilightVillage_RPG_Tileset.png" id="2_dopym"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ootpb"]
@@ -2593,6 +2594,7 @@ sources/0 = SubResource("TileSetAtlasSource_ootpb")
 
 [node name="Node2D" type="Node2D" unique_id=1919603811]
 position = Vector2(-355, -177)
+script = ExtResource("1_v38iq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1497919598]
 layer = -1
