@@ -22,10 +22,14 @@ func _physics_process(delta: float) -> void:
 	if !alive:
 		return
 		
+		
+		
+	
 	if Input.is_action_just_pressed("attack") and not attack:
 		attack = true
 		animated_sprite_2d.play("fight")
-	
+
+ 
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -37,7 +41,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	if is_on_floor():
+	
+
+
+	if is_on_floor():  
 		jump=false
 		
 	# Handle jump input
@@ -81,7 +88,9 @@ func respawn():
 	global_position = Vector2(-346, 616)
 	animated_sprite_2d.play("default")
 	
-	
-	
 func launch():
 	velocity.y = -1000
+	
+func launchlaunch():
+	velocity.y = -800
+	velocity.x = -100000
