@@ -14,3 +14,8 @@ func _process(delta: float) -> void:
 
 func _on_audio_stream_player_finished() -> void:
 	audio_stream_player.play()
+
+
+func _on_lavaaa_body_entered(body: Node2D) -> void:
+	if body.name == "player":
+		body.die()
