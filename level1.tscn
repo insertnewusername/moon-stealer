@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://bowx0573mbdlj" path="res://assets/PNG/Platfromer/Crystal_Caves_Forest_2D_Platformer_Tileset_Platformer - Wooden Barrel.png" id="32_8ywnu"]
 [ext_resource type="Texture2D" uid="uid://c0ktdbq77lbi4" path="res://assets/PNG/Platfromer/Crystal_Caves_Forest_2D_Platformer_Tileset_Platformer - Wooden Box.png" id="33_35yik"]
 [ext_resource type="PackedScene" uid="uid://dv3wohrumkbux" path="res://sprites/enemy1.tscn" id="36_xhed0"]
+[ext_resource type="PackedScene" uid="uid://crar2bsgcerev" path="res://sprites/jumppad.tscn" id="37_6tyme"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mkgpj"]
 texture = ExtResource("4_t8chk")
@@ -1777,5 +1778,9 @@ volume_db = 2.93
 [node name="bug1" parent="blobs" unique_id=871288592 instance=ExtResource("36_xhed0")]
 position = Vector2(301, 457)
 scale = Vector2(3.320005, 3.320005)
+
+[node name="jumppad" parent="." unique_id=1739670077 instance=ExtResource("37_6tyme")]
+position = Vector2(5, 418)
+scale = Vector2(0.32444954, 0.36134323)
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

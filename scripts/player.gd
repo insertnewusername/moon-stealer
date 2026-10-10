@@ -81,3 +81,7 @@ func respawn():
 	global_position = Vector2(-346, 616)
 	animated_sprite_2d.play("default")
 	
+	
+	
+func launch():
+	velocity.y = -1000
