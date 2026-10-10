@@ -11,7 +11,10 @@ var attack = false
 
 func _ready():
 	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
-	
+	# walking up slope stuff
+	floor_max_angle = deg_to_rad(70.0)
+	floor_snap_length = 9.0
+	floor_stop_on_slope = true
 func _physics_process(delta: float) -> void:
 	
 

@@ -81,7 +81,7 @@ texture = ExtResource("10_lslib")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jra0u"]
 texture = ExtResource("11_d78wo")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k2846"]
 texture = ExtResource("12_2cjx3")
@@ -1775,7 +1775,7 @@ volume_db = 2.93
 [node name="blobs" type="Node2D" parent="." unique_id=1145020776]
 
 [node name="bug1" parent="blobs" unique_id=871288592 instance=ExtResource("36_xhed0")]
-position = Vector2(289, 457.00003)
+position = Vector2(301, 457)
 scale = Vector2(3.320005, 3.320005)
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
