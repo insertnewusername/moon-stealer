@@ -242,7 +242,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udifs"]
-size = Vector2(9, 20)
+size = Vector2(5, 20)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1688579368]
 script = ExtResource("1_8yuya")
@@ -251,13 +251,10 @@ script = ExtResource("1_8yuya")
 position = Vector2(-9.536743e-07, -12.000001)
 scale = Vector2(0.11824323, 0.12065347)
 sprite_frames = SubResource("SpriteFrames_k7aqk")
-animation = &"fight"
 autoplay = "default"
-frame = 7
-frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1294488724]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2053702687]
-position = Vector2(0, -10)
+position = Vector2(0.5, -10)
 shape = SubResource("RectangleShape2D_udifs")
