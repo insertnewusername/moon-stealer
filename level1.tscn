@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://crar2bsgcerev" path="res://sprites/jumppad.tscn" id="37_6tyme"]
 [ext_resource type="Script" uid="uid://ytxwuh16vmoi" path="res://scripts/launchpad.gd" id="38_ktasi"]
 [ext_resource type="PackedScene" uid="uid://swc2ioqi43je" path="res://sprites/bat.tscn" id="40_bi6q3"]
+[ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="41_lslib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bi6q3"]
 texture = ExtResource("4_hxcog")
@@ -1858,6 +1859,18 @@ scale = Vector2(2.12, 2.12)
 [node name="bat4" parent="bats" unique_id=1105395355 instance=ExtResource("40_bi6q3")]
 position = Vector2(595, -53)
 scale = Vector2(2.12, 2.12)
+
+[node name="Transitionscreen" parent="." unique_id=1972415330 instance=ExtResource("41_lslib")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -545.0
+offset_top = -1592.0
+offset_right = 2151.0
+offset_bottom = 1289.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="body_entered" from="lavaaa" to="." method="_on_lavaaa_body_entered"]
