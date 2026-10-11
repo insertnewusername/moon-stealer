@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://7ai3iuq4bvoh"]
+
+[node name="Transitionscreen" type="ColorRect" unique_id=1972415330]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="." unique_id=694134131]

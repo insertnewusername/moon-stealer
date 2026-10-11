@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbyrcsiuu3ra0"]
 
 [ext_resource type="Texture2D" uid="uid://c8gxtata2k2di" path="res://assets/bg.png" id="1_frw7t"]
+[ext_resource type="Script" uid="uid://dfx00rinupmnm" path="res://scripts/startup.gd" id="1_tsans"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frw7t"]
 bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
@@ -31,6 +32,7 @@ bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
 bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1884162038]
+script = ExtResource("1_tsans")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=970887811]
 
@@ -55,7 +57,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 80
 text = "Moonstealer"
 
-[node name="Button2" type="Button" parent="CanvasLayer" unique_id=34136559]
+[node name="Tutorial" type="Button" parent="CanvasLayer" unique_id=34136559]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -76,7 +78,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_lsk8l")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bf7nw")
 text = "Instructions"
 
-[node name="Button3" type="Button" parent="CanvasLayer" unique_id=1521388657]
+[node name="Play" type="Button" parent="CanvasLayer" unique_id=1521388657]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -96,3 +98,5 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_tsx3d")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_lsk8l")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bf7nw")
 text = "Play"
+
+[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
