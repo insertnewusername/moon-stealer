@@ -97,4 +97,4 @@ func launchlaunch():
 	
 	
 func bounce():
-	velocity.y = -400
+	velocity.y = -500

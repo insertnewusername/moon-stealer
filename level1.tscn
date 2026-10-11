@@ -41,6 +41,7 @@
 [ext_resource type="Script" uid="uid://ytxwuh16vmoi" path="res://scripts/launchpad.gd" id="38_ktasi"]
 [ext_resource type="PackedScene" uid="uid://swc2ioqi43je" path="res://sprites/bat.tscn" id="40_bi6q3"]
 [ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="41_lslib"]
+[ext_resource type="PackedScene" uid="uid://8gg4q7sdha2u" path="res://sprites/pumpkin.tscn" id="42_d78wo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bi6q3"]
 texture = ExtResource("4_hxcog")
@@ -1860,6 +1861,10 @@ scale = Vector2(2.12, 2.12)
 position = Vector2(595, -53)
 scale = Vector2(2.12, 2.12)
 
+[node name="bat5" parent="bats" unique_id=398446179 instance=ExtResource("40_bi6q3")]
+position = Vector2(980, -345)
+scale = Vector2(2.12, 2.12)
+
 [node name="Transitionscreen" parent="." unique_id=1972415330 instance=ExtResource("41_lslib")]
 visible = false
 anchors_preset = 0
@@ -1871,6 +1876,20 @@ offset_right = 2151.0
 offset_bottom = 1289.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="pumpkin" type="Node2D" parent="." unique_id=1734208885]
+
+[node name="Pumpkin" parent="pumpkin" unique_id=1788263508 instance=ExtResource("42_d78wo")]
+position = Vector2(230.00003, -270.00003)
+scale = Vector2(0.4400006, 0.4400006)
+
+[node name="Pumpkin2" parent="pumpkin" unique_id=865412145 instance=ExtResource("42_d78wo")]
+position = Vector2(490, -267)
+scale = Vector2(0.4400006, 0.4400006)
+
+[node name="Pumpkin3" parent="pumpkin" unique_id=735963592 instance=ExtResource("42_d78wo")]
+position = Vector2(757, -329.99997)
+scale = Vector2(0.4400006, 0.4400006)
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="body_entered" from="lavaaa" to="." method="_on_lavaaa_body_entered"]
