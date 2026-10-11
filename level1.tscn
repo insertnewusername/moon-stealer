@@ -1894,7 +1894,7 @@ position = Vector2(490, -267)
 scale = Vector2(0.4400006, 0.4400006)
 
 [node name="Pumpkin3" parent="pumpkin" unique_id=735963592 instance=ExtResource("42_d78wo")]
-position = Vector2(757, -329.99997)
+position = Vector2(755, -335)
 scale = Vector2(0.4400006, 0.4400006)
 
 [node name="Pumpkin4" parent="pumpkin" unique_id=1764375167 instance=ExtResource("42_d78wo")]
