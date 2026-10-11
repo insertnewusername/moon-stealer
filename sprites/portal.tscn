@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cu2xj3wt0dw1t"]
 
 [ext_resource type="Texture2D" uid="uid://uelo2ji0ss4y" path="res://assets/portal.png" id="1_1oc2e"]
+[ext_resource type="Script" uid="uid://bdu24n8yrwaub" path="res://scripts/portal.gd" id="1_f3gog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3gog"]
 size = Vector2(184.99002, 846.5087)
 
 [node name="Area2D" type="Area2D" unique_id=1993303644]
+script = ExtResource("1_f3gog")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=32510415]
 position = Vector2(11.328023, -193.67195)
@@ -16,3 +18,5 @@ texture = ExtResource("1_1oc2e")
 position = Vector2(15.6955185, -157.30446)
 scale = Vector2(1.3946699, 0.36384735)
 shape = SubResource("RectangleShape2D_f3gog")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

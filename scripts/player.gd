@@ -78,6 +78,7 @@ func die():
 	animated_sprite_2d.play("ded")
 	
 func _on_animation_finished():
+
 	if animated_sprite_2d.animation == "ded":
 		respawn()
 	elif animated_sprite_2d.animation == "fight":
@@ -98,3 +99,6 @@ func launchlaunch():
 	
 func bounce():
 	velocity.y = -500
+	
+func tp():
+	global_position = Vector2(-345.108, -465.0276)
