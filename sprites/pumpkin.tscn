@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8gg4q7sdha2u"]
+
+[ext_resource type="Texture2D" uid="uid://bl4avtwh2ixfn" path="res://assets/pumpkin.png" id="1_2hnuj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lt43v"]
+radius = 61.073727
+
+[node name="StaticBody2D" type="Area2D" unique_id=427715207]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=32510415]
+position = Vector2(11.125023, 5.125)
+scale = Vector2(0.113125026, 0.113125026)
+texture = ExtResource("1_2hnuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1365429586]
+position = Vector2(12, 34)
+scale = Vector2(1.3599997, 1.3599997)
+shape = SubResource("CircleShape2D_lt43v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
