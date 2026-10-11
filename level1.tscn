@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="41_lslib"]
 [ext_resource type="PackedScene" uid="uid://8gg4q7sdha2u" path="res://sprites/pumpkin.tscn" id="42_d78wo"]
 [ext_resource type="PackedScene" uid="uid://cu2xj3wt0dw1t" path="res://sprites/portal.tscn" id="43_2cjx3"]
+[ext_resource type="PackedScene" uid="uid://dv84l8nnr76a3" path="res://sprites/finish.tscn" id="45_o45kq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bi6q3"]
 texture = ExtResource("4_hxcog")
@@ -1871,6 +1872,14 @@ scale = Vector2(2.12, 2.12)
 position = Vector2(975.99994, -421)
 scale = Vector2(2.12, 2.12)
 
+[node name="bat6" parent="bats" unique_id=977322764 instance=ExtResource("40_bi6q3")]
+position = Vector2(374, -571)
+scale = Vector2(2.12, 2.12)
+
+[node name="bat7" parent="bats" unique_id=1695086718 instance=ExtResource("40_bi6q3")]
+position = Vector2(200, -618)
+scale = Vector2(2.12, 2.12)
+
 [node name="Transitionscreen" parent="." unique_id=1972415330 instance=ExtResource("41_lslib")]
 visible = false
 anchors_preset = 0
@@ -1904,6 +1913,10 @@ scale = Vector2(0.4400006, 0.4400006)
 [node name="portal" parent="." unique_id=1993303644 instance=ExtResource("43_2cjx3")]
 position = Vector2(1078, -63)
 scale = Vector2(0.21269122, 0.21269122)
+
+[node name="Area2D" parent="." unique_id=1315397 instance=ExtResource("45_o45kq")]
+position = Vector2(14.999999, -617.99994)
+scale = Vector2(0.25237885, 0.25237885)
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="body_entered" from="lavaaa" to="." method="_on_lavaaa_body_entered"]
