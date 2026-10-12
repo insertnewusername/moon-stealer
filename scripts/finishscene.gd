@@ -1,9 +1,10 @@
 extends Node2D
 
-
+var pressed = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$CanvasLayer/Transitionscreen.show()
+	$CanvasLayer/Transitionscreen/Timer.start()
 	$CanvasLayer/Transitionscreen/AnimationPlayer.play("fade_out")
 
 
@@ -16,8 +17,10 @@ func _on_play_pressed() -> void:
 	$CanvasLayer/Transitionscreen.show()
 	$CanvasLayer/Transitionscreen/Timer.start()
 	$CanvasLayer/Transitionscreen/AnimationPlayer.play("fade_in")
+	pressed = true
 	
 
 func _on_timer_timeout() -> void:
 	$CanvasLayer/Transitionscreen.hide()
-	get_tree().change_scene_to_file("res://Scenes/startup.tscn")
+	if pressed == true:
+		get_tree().change_scene_to_file("res://Scenes/startup.tscn")
