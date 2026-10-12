@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://chbp8lx750wvw"]
 
+[ext_resource type="Script" uid="uid://cd3q46rk5ennq" path="res://scripts/finishscene.gd" id="1_bgj60"]
 [ext_resource type="Texture2D" uid="uid://tt2xpqqwomqo" path="res://assets/startbg.png" id="1_nv66a"]
+[ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="3_6tqh2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv66a"]
 bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
@@ -31,6 +33,7 @@ bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
 bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
 
 [node name="Node2D" type="Node2D" unique_id=47251369]
+script = ExtResource("1_bgj60")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2027791263]
 
@@ -76,3 +79,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_t38wq")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_3vmem")
 theme_override_styles/focus = SubResource("StyleBoxFlat_avoxp")
 text = "Play Again"
+
+[node name="Transitionscreen" parent="CanvasLayer" unique_id=1972415330 instance=ExtResource("3_6tqh2")]
+visible = false
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Transitionscreen" unique_id=1204362198]
+one_shot = true
+
+[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
+[connection signal="timeout" from="CanvasLayer/Transitionscreen/Timer" to="." method="_on_timer_timeout"]
