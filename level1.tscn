@@ -1903,7 +1903,7 @@ position = Vector2(1078, -63)
 scale = Vector2(0.21269122, 0.21269122)
 
 [node name="Area2D" parent="." unique_id=1315397 instance=ExtResource("45_o45kq")]
-position = Vector2(184.99998, 733.99994)
+position = Vector2(17.00003, -616.99994)
 scale = Vector2(0.25237885, 0.25237885)
 script = null
 
