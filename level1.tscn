@@ -1880,21 +1880,6 @@ scale = Vector2(2.12, 2.12)
 position = Vector2(200, -618)
 scale = Vector2(2.12, 2.12)
 
-[node name="Transitionscreen" parent="." unique_id=1972415330 instance=ExtResource("41_lslib")]
-visible = false
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -545.0
-offset_top = -1592.0
-offset_right = 2151.0
-offset_bottom = 1289.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="Timer" type="Timer" parent="Transitionscreen" unique_id=660977053]
-one_shot = true
-
 [node name="pumpkin" type="Node2D" parent="." unique_id=1734208885]
 
 [node name="Pumpkin" parent="pumpkin" unique_id=1788263508 instance=ExtResource("42_d78wo")]
@@ -1918,10 +1903,27 @@ position = Vector2(1078, -63)
 scale = Vector2(0.21269122, 0.21269122)
 
 [node name="Area2D" parent="." unique_id=1315397 instance=ExtResource("45_o45kq")]
-position = Vector2(14.999999, -617.99994)
+position = Vector2(184.99998, 733.99994)
 scale = Vector2(0.25237885, 0.25237885)
+script = null
+
+[node name="Transitionscreen" parent="." unique_id=1972415330 instance=ExtResource("41_lslib")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -545.0
+offset_top = -1592.0
+offset_right = 2151.0
+offset_bottom = 1289.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Timer" type="Timer" parent="Transitionscreen" unique_id=660977053]
+one_shot = true
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="body_entered" from="lavaaa" to="." method="_on_lavaaa_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Transitionscreen/Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Transitionscreen/Timer" to="Area2D" method="_on_timer_timeout"]

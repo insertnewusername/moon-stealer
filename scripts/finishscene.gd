@@ -19,4 +19,5 @@ func _on_play_pressed() -> void:
 	
 
 func _on_timer_timeout() -> void:
+	$CanvasLayer/Transitionscreen.hide()
 	get_tree().change_scene_to_file("res://Scenes/startup.tscn")
