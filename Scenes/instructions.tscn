@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dch6xp6li1u76"]
 
+[ext_resource type="Script" uid="uid://uqwwkbo71bfv" path="res://scripts/instructions.gd" id="1_5doqj"]
 [ext_resource type="Texture2D" uid="uid://tt2xpqqwomqo" path="res://assets/startbg.png" id="1_dxknu"]
 [ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="2_5doqj"]
 
@@ -44,6 +45,7 @@ bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
 bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
 
 [node name="Node2D" type="Node2D" unique_id=47251369]
+script = ExtResource("1_5doqj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2027791263]
 
@@ -93,12 +95,6 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_avoxp")
 text = "Ok"
 metadata/_edit_use_anchors_ = true
 
-[node name="Transitionscreen" parent="CanvasLayer" unique_id=1972415330 instance=ExtResource("2_5doqj")]
-visible = false
-
-[node name="Timer" type="Timer" parent="CanvasLayer/Transitionscreen" unique_id=1204362198]
-one_shot = true
-
 [node name="Label2" type="Label" parent="CanvasLayer" unique_id=160322413]
 anchors_preset = -1
 anchor_right = 1.0
@@ -140,6 +136,12 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Kill enemy: Attack + rush into them"
 metadata/_edit_use_anchors_ = true
+
+[node name="Transitionscreen" parent="CanvasLayer" unique_id=1972415330 instance=ExtResource("2_5doqj")]
+visible = false
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Transitionscreen" unique_id=1204362198]
+one_shot = true
 
 [connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
 [connection signal="timeout" from="CanvasLayer/Transitionscreen/Timer" to="." method="_on_timer_timeout"]
