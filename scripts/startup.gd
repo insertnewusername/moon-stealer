@@ -13,11 +13,13 @@ func _process(delta: float) -> void:
 
 func _on_play_pressed() -> void:
 	button = 1
+	$click.play()
 	transition()
 
 
 func _on_tutorial_pressed() -> void:
 	button = 2
+	$click.play()
 	transition()
 
 func transition():

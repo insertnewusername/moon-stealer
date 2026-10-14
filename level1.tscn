@@ -45,6 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://8gg4q7sdha2u" path="res://sprites/pumpkin.tscn" id="42_d78wo"]
 [ext_resource type="PackedScene" uid="uid://cu2xj3wt0dw1t" path="res://sprites/portal.tscn" id="43_2cjx3"]
 [ext_resource type="PackedScene" uid="uid://dv84l8nnr76a3" path="res://sprites/finish.tscn" id="45_o45kq"]
+[ext_resource type="AudioStream" uid="uid://pbeiifartumf" path="res://assets/clickity.mp3" id="46_ycl4i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bi6q3"]
 texture = ExtResource("4_hxcog")
@@ -1921,6 +1922,10 @@ grow_vertical = 1
 
 [node name="Timer" type="Timer" parent="Transitionscreen" unique_id=660977053]
 one_shot = true
+
+[node name="click" type="AudioStreamPlayer" parent="." unique_id=811503275]
+stream = ExtResource("46_ycl4i")
+volume_db = -6.597
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="body_entered" from="lavaaa" to="." method="_on_lavaaa_body_entered"]

@@ -87,6 +87,7 @@ func _on_animation_finished():
 		
 func respawn():	
 	alive = true
+	attack = false
 	global_position = Vector2(-346, 616)
 	animated_sprite_2d.play("default")
 	

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dfx00rinupmnm" path="res://scripts/startup.gd" id="1_tsans"]
 [ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="3_8q8xm"]
 [ext_resource type="AudioStream" uid="uid://b2fkn77kjjutw" path="res://assets/chopinahhh.mp3" id="4_g3wv1"]
+[ext_resource type="AudioStream" uid="uid://pbeiifartumf" path="res://assets/clickity.mp3" id="5_hljtq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frw7t"]
 bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
@@ -121,6 +122,10 @@ visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1418273735]
 stream = ExtResource("4_g3wv1")
+volume_db = -6.597
+
+[node name="click" type="AudioStreamPlayer" parent="." unique_id=854724689]
+stream = ExtResource("5_hljtq")
 volume_db = -6.597
 
 [connection signal="pressed" from="CanvasLayer/Tutorial" to="." method="_on_tutorial_pressed"]

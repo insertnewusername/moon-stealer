@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 
 
 func _on_play_pressed() -> void:
+	$click.play()
 	$CanvasLayer/Transitionscreen.show()
 	$CanvasLayer/Transitionscreen/Timer.start()
 	$CanvasLayer/Transitionscreen/AnimationPlayer.play("fade_in")
