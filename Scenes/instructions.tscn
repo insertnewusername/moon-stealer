@@ -127,5 +127,19 @@ theme_override_font_sizes/font_size = 30
 text = "Attack: Spacebar"
 metadata/_edit_use_anchors_ = true
 
+[node name="Label4" type="Label" parent="CanvasLayer" unique_id=100307283]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 340.0
+offset_top = 334.0
+offset_right = -305.0
+offset_bottom = -265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Kill enemy: Attack + rush into them"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
 [connection signal="timeout" from="CanvasLayer/Transitionscreen/Timer" to="." method="_on_timer_timeout"]
