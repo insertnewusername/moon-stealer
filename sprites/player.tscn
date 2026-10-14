@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cuvdrm53kuloo" path="res://scripts/player.gd" id="1_8yuya"]
 [ext_resource type="Texture2D" uid="uid://dtt60wqw1guc8" path="res://assets/spritesheet.png" id="1_wf2ox"]
+[ext_resource type="AudioStream" uid="uid://cq7iby1ic20vy" path="res://assets/swordy.mp3" id="3_qcqa4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ii58a"]
 atlas = ExtResource("1_wf2ox")
@@ -258,3 +259,6 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2053702687]
 position = Vector2(0.5, -10)
 shape = SubResource("RectangleShape2D_udifs")
+
+[node name="Chopinahhh" type="AudioStreamPlayer" parent="." unique_id=27261583]
+stream = ExtResource("3_qcqa4")
