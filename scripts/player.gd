@@ -75,6 +75,7 @@ func score():
 	print(stars)
 	
 func die():
+	$oof.play()
 	alive = false
 	animated_sprite_2d.play("ded")
 	
