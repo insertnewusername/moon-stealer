@@ -1877,7 +1877,7 @@ position = Vector2(374, -571)
 scale = Vector2(2.12, 2.12)
 
 [node name="bat7" parent="bats" unique_id=1695086718 instance=ExtResource("40_bi6q3")]
-position = Vector2(214, -618)
+position = Vector2(237, -619)
 scale = Vector2(2.12, 2.12)
 
 [node name="pumpkin" type="Node2D" parent="." unique_id=1734208885]

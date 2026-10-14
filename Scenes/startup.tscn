@@ -104,4 +104,8 @@ text = "Play"
 [node name="Transitionscreen" parent="CanvasLayer" unique_id=1972415330 instance=ExtResource("3_8q8xm")]
 visible = false
 
+[node name="Timer" type="Timer" parent="CanvasLayer/Transitionscreen" unique_id=2113719358]
+
+[connection signal="pressed" from="CanvasLayer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
+[connection signal="timeout" from="CanvasLayer/Transitionscreen/Timer" to="." method="_on_timer_timeout"]
