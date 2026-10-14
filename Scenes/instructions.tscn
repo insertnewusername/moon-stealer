@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://dch6xp6li1u76"]
+
+[ext_resource type="Texture2D" uid="uid://tt2xpqqwomqo" path="res://assets/startbg.png" id="1_dxknu"]
+[ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="2_5doqj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv66a"]
+bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6pr6"]
+bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgj60"]
+bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tqh2"]
+bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oub70"]
+bg_color = Color(0.2795145, 0.5051684, 0.72137964, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t38wq"]
+bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vmem"]
+bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avoxp"]
+bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
+
+[node name="Node2D" type="Node2D" unique_id=47251369]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2027791263]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1620375786]
+self_modulate = Color(1, 1, 1, 0.27450982)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dxknu")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=843566376]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 372.0
+offset_top = 53.0
+offset_right = -158.0
+offset_bottom = -507.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Instructions"
+metadata/_edit_use_anchors_ = true
+
+[node name="Play" type="Button" parent="CanvasLayer" unique_id=50498914]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 410.0
+offset_top = 438.0
+offset_right = -435.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_nv66a")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_o6pr6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgj60")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_6tqh2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oub70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_t38wq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_3vmem")
+theme_override_styles/focus = SubResource("StyleBoxFlat_avoxp")
+text = "Ok"
+metadata/_edit_use_anchors_ = true
+
+[node name="Transitionscreen" parent="CanvasLayer" unique_id=1972415330 instance=ExtResource("2_5doqj")]
+visible = false
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Transitionscreen" unique_id=1204362198]
+one_shot = true
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=160322413]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 343.0
+offset_top = 186.0
+offset_right = -380.0
+offset_bottom = -413.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Movement: WASD/arrow keys"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer" unique_id=1683867970]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 341.0
+offset_top = 263.0
+offset_right = -382.0
+offset_bottom = -336.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Attack: Spacebar"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
+[connection signal="timeout" from="CanvasLayer/Transitionscreen/Timer" to="." method="_on_timer_timeout"]
