@@ -7,19 +7,19 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ii58a"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(501, 1809, 157, 191)
+region = Rect2(501, 1820, 152, 174)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vk4k3"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(668, 1809, 157, 191)
+region = Rect2(668, 1820, 152, 174)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sq62d"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(835, 1809, 157, 191)
+region = Rect2(835, 1820, 152, 174)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2xy4"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(1002, 1809, 157, 191)
+region = Rect2(1002, 1820, 152, 174)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8yuya"]
 atlas = ExtResource("1_wf2ox")
@@ -64,10 +64,6 @@ region = Rect2(1420, 1400, 145, 200)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cilha"]
 atlas = ExtResource("1_wf2ox")
 region = Rect2(1644, 1400, 116, 200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2elop"]
-atlas = ExtResource("1_wf2ox")
-region = Rect2(1826, 1400, 166, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ppxb4"]
 atlas = ExtResource("1_wf2ox")
@@ -182,9 +178,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cilha")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2elop")
 }],
 "loop": false,
 "name": &"fight",
@@ -253,6 +246,7 @@ script = ExtResource("1_8yuya")
 position = Vector2(-9.536743e-07, -12.000001)
 scale = Vector2(0.11824323, 0.12065347)
 sprite_frames = SubResource("SpriteFrames_k7aqk")
+animation = &"jump"
 autoplay = "default"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1294488724]
