@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var label: Label = $"../CanvasLayer2/Panel/Label"
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -73,6 +74,7 @@ func _physics_process(delta: float) -> void:
 func score():
 	stars = stars+1
 	print(stars)
+	label.text = "Score: %s" % score
 	
 func die():
 	$oof.play()

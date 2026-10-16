@@ -1,6 +1,7 @@
 extends Node2D
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var transitionscreen: ColorRect = $Transitionscreen
+
 var finished = false
 
 # Called when the node enters the scene tree for the first time.

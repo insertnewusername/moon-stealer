@@ -1937,13 +1937,14 @@ volume_db = 0.278
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1302503368]
 
 [node name="Panel" type="Panel" parent="CanvasLayer2" unique_id=1037534489]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 92.0
+offset_bottom = 30.0
 
 [node name="Label" type="Label" parent="CanvasLayer2/Panel" unique_id=162457242]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 91.0
+offset_bottom = 29.0
+text = "Score:"
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="body_entered" from="lavaaa" to="." method="_on_lavaaa_body_entered"]
