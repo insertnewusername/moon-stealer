@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cd3q46rk5ennq" path="res://scripts/finishscene.gd" id="1_bgj60"]
 [ext_resource type="Texture2D" uid="uid://tt2xpqqwomqo" path="res://assets/startbg.png" id="1_nv66a"]
 [ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="3_6tqh2"]
+[ext_resource type="AudioStream" uid="uid://cr6gbun30wtih" path="res://assets/yayyy.mp3" id="4_6tqh2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv66a"]
 bg_color = Color(0.40052745, 0.62487125, 0.8099507, 1)
@@ -97,6 +98,9 @@ visible = false
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Transitionscreen" unique_id=1204362198]
 one_shot = true
+
+[node name="yayy" type="AudioStreamPlayer" parent="." unique_id=28271327]
+stream = ExtResource("4_6tqh2")
 
 [connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
 [connection signal="timeout" from="CanvasLayer/Transitionscreen/Timer" to="." method="_on_timer_timeout"]

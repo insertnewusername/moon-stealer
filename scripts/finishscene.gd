@@ -6,6 +6,7 @@ func _ready() -> void:
 	$CanvasLayer/Transitionscreen.show()
 	$CanvasLayer/Transitionscreen/Timer.start()
 	$CanvasLayer/Transitionscreen/AnimationPlayer.play("fade_out")
+	$yayy.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
