@@ -74,7 +74,7 @@ func _physics_process(delta: float) -> void:
 func score():
 	stars = stars+1
 	print(stars)
-	label.text = "Score: %s" % score
+	label.text = "Score: %s" % stars
 	
 func die():
 	$oof.play()
