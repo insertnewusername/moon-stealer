@@ -95,31 +95,35 @@ region = Rect2(1360, 603, 130, 191)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k7aqk"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(336, 200, 148, 200)
+region = Rect2(338, 202, 139, 182)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_udifs"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(504, 200, 148, 200)
+region = Rect2(507, 202, 139, 182)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rpba7"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(672, 200, 148, 200)
+region = Rect2(676, 202, 139, 182)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_43tkh"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(840, 200, 148, 200)
+region = Rect2(845, 202, 139, 182)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w51jo"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(1008, 200, 148, 200)
+region = Rect2(1014, 202, 139, 182)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvg7m"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(1344, 200, 148, 200)
+region = Rect2(1183, 202, 139, 182)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7s5qv"]
 atlas = ExtResource("1_wf2ox")
-region = Rect2(1512, 200, 148, 200)
+region = Rect2(1352, 202, 139, 182)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2elop"]
+atlas = ExtResource("1_wf2ox")
+region = Rect2(1521, 202, 139, 182)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k7aqk"]
 animations = [{
@@ -230,10 +234,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7s5qv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2elop")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udifs"]
@@ -246,8 +253,10 @@ script = ExtResource("1_8yuya")
 position = Vector2(-9.536743e-07, -12.000001)
 scale = Vector2(0.11824323, 0.12065347)
 sprite_frames = SubResource("SpriteFrames_k7aqk")
-animation = &"jump"
+animation = &"ded"
 autoplay = "default"
+frame = 3
+frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1294488724]
 
