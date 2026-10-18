@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://6no7wiswdoa2" path="res://assets/PNG/Environment/Crystal_Caves_Forest_2D_Platformer_Tileset_Environment - Pillar.png" id="45_kgbam"]
 [ext_resource type="PackedScene" uid="uid://dv84l8nnr76a3" path="res://sprites/finish.tscn" id="45_o45kq"]
 [ext_resource type="AudioStream" uid="uid://pbeiifartumf" path="res://assets/clickity.mp3" id="46_ycl4i"]
+[ext_resource type="FontFile" uid="uid://1x2c26irbhkp" path="res://assets/COMIC.TTF" id="57_xnk0v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bi6q3"]
 texture = ExtResource("4_hxcog")
@@ -2143,6 +2144,7 @@ anchor_right = 0.04310345
 offset_top = 2.0
 offset_right = 114.0
 offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("57_xnk0v")
 theme_override_font_sizes/font_size = 27
 text = "Score:"
 metadata/_edit_use_anchors_ = true

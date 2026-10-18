@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c8gxtata2k2di" path="res://assets/bg.png" id="1_frw7t"]
 [ext_resource type="Script" uid="uid://dfx00rinupmnm" path="res://scripts/startup.gd" id="1_tsans"]
 [ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="3_8q8xm"]
+[ext_resource type="FontFile" uid="uid://1x2c26irbhkp" path="res://assets/COMIC.TTF" id="3_tsx3d"]
 [ext_resource type="AudioStream" uid="uid://b2fkn77kjjutw" path="res://assets/chopinahhh.mp3" id="4_g3wv1"]
 [ext_resource type="AudioStream" uid="uid://pbeiifartumf" path="res://assets/clickity.mp3" id="5_hljtq"]
 
@@ -81,6 +82,7 @@ offset_top = 94.336
 offset_right = -379.0
 offset_bottom = -451.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_tsx3d")
 theme_override_font_sizes/font_size = 80
 text = "Moonstealer"
 
@@ -94,6 +96,7 @@ offset_right = -440.0
 offset_bottom = -125.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_tsx3d")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_frw7t")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_tsans")
@@ -115,6 +118,7 @@ offset_right = -442.0
 offset_bottom = -281.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_tsx3d")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_frw7t")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_tsans")

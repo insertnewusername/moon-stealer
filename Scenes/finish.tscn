@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cd3q46rk5ennq" path="res://scripts/finishscene.gd" id="1_bgj60"]
 [ext_resource type="Texture2D" uid="uid://tt2xpqqwomqo" path="res://assets/startbg.png" id="1_nv66a"]
 [ext_resource type="PackedScene" uid="uid://7ai3iuq4bvoh" path="res://Scenes/transitionscreen.tscn" id="3_6tqh2"]
+[ext_resource type="FontFile" uid="uid://1x2c26irbhkp" path="res://assets/COMIC.TTF" id="3_oub70"]
 [ext_resource type="AudioStream" uid="uid://cr6gbun30wtih" path="res://assets/yayyy.mp3" id="4_6tqh2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv66a"]
@@ -69,6 +70,7 @@ offset_right = -266.0
 offset_bottom = -426.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_oub70")
 theme_override_font_sizes/font_size = 64
 text = "You Beat The Game!"
 
@@ -82,6 +84,7 @@ offset_right = -442.0
 offset_bottom = -231.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_oub70")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_nv66a")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_o6pr6")
