@@ -2107,7 +2107,7 @@ position = Vector2(1079.9999, -421)
 scale = Vector2(0.4400006, 0.4400006)
 
 [node name="portal" parent="." unique_id=1993303644 instance=ExtResource("43_2cjx3")]
-position = Vector2(1078, -63)
+position = Vector2(1078, -59)
 scale = Vector2(0.21269122, 0.21269122)
 
 [node name="Area2D" parent="." unique_id=1315397 instance=ExtResource("45_o45kq")]
