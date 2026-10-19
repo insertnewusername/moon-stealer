@@ -2075,7 +2075,7 @@ position = Vector2(272, 694)
 scale = Vector2(2.12, 2.12)
 
 [node name="bat2" parent="bats" unique_id=584199720 instance=ExtResource("40_bi6q3")]
-position = Vector2(228, -71)
+position = Vector2(241, -72)
 scale = Vector2(2.12, 2.12)
 
 [node name="bat3" parent="bats" unique_id=1458865602 instance=ExtResource("40_bi6q3")]
