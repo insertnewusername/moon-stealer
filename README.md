@@ -8,7 +8,7 @@ There are no checkpoints on purpose! So that beating the game feels rewarding
 This game was made by me using godot, and godotscript!
 Although I have made godot games before, this game has many more features I haven't implemented in previous games.
 These include a instruction page (kinda basic), jumppads, tinkering with velocity in the code, enemy random sounds (although I don't think I did it the way your supposed to), attack logic, and more!
-
+As this was a platformer, there was endless testing, testing, and testing.
 <h2>Features</h2>
 Attack
 Move around
