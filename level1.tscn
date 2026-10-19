@@ -2167,12 +2167,14 @@ scale = Vector2(0.88001955, 0.88001955)
 theme_override_styles/panel = SubResource("StyleBoxFlat_kt8t3")
 
 [node name="CheckBox" type="TextureButton" parent="CanvasLayer2" unique_id=640135151]
-offset_left = 1090.0
-offset_top = 16.0
-offset_right = 3118.0
-offset_bottom = 2024.0
+offset_left = 1089.0
+offset_top = 15.0
+offset_right = 3117.0
+offset_bottom = 2023.0
 scale = Vector2(0.019564802, 0.019564802)
 toggle_mode = true
+shortcut_feedback = false
+shortcut_in_tooltip = false
 texture_normal = ExtResource("58_kt8t3")
 texture_pressed = ExtResource("59_6dqlg")
 
