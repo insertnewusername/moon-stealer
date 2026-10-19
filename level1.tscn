@@ -2174,6 +2174,7 @@ offset_right = 3117.0
 offset_bottom = 2023.0
 scale = Vector2(0.019564802, 0.019564802)
 toggle_mode = true
+action_mode = 0
 shortcut_feedback = false
 shortcut_in_tooltip = false
 texture_normal = ExtResource("58_kt8t3")
