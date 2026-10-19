@@ -1,7 +1,8 @@
 # Moon stealer
 
-This is a 2d godot platformer, focused on getting to the top!
+This is a 2d godot platformer, focused on getting to the top without dying!
 There are several enemies in your way, in which you slice through them
+There are no checkpoints on purpose! So that beating the game feels rewarding
 
 ## How this was made
 This game was made by me using godot, and godotscript!
@@ -26,9 +27,3 @@ Run into enemy - die
 
 <h2>Screenshots</h2>
 Here are some screenshots of the game!
-
-
-<img width="1912" height="1066" alt="Screenshot 2026-10-19 151311" src="https://github.com/user-attachments/assets/f9157f43-f42e-4a6b-85a8-ce170fa73f75" />
-<img width="1916" height="1078" alt="Screenshot 2026-10-19 151317" src="https://github.com/user-attachments/assets/a298cb45-add3-40b1-bc9d-d5f175ba800a" />
-<img width="1917" height="1078" alt="Screenshot 2026-10-19 151441" src="https://github.com/user-attachments/assets/3e3a5635-c1eb-4a69-8416-432b26dc349b" />
-
