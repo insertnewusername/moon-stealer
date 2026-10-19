@@ -1,4 +1,5 @@
 extends Node2D
+
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var transitionscreen: ColorRect = $Transitionscreen
 
@@ -42,3 +43,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		$Transitionscreen/Timer.start()
 		$Transitionscreen/AnimationPlayer.play("fade_in")
 		 
+
+
+func _on_texture_button_toggled(toggled_on: bool) -> void:
+	var master_bus = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(master_bus, toggled_on)

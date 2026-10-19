@@ -58,6 +58,8 @@
 [ext_resource type="PackedScene" uid="uid://dv84l8nnr76a3" path="res://sprites/finish.tscn" id="45_o45kq"]
 [ext_resource type="AudioStream" uid="uid://pbeiifartumf" path="res://assets/clickity.mp3" id="46_ycl4i"]
 [ext_resource type="FontFile" uid="uid://1x2c26irbhkp" path="res://assets/COMIC.TTF" id="57_xnk0v"]
+[ext_resource type="Texture2D" uid="uid://cqwhfaiuqmrd4" path="res://assets/unmute.png" id="58_kt8t3"]
+[ext_resource type="Texture2D" uid="uid://c65biygka8mlj" path="res://assets/muted.png" id="59_6dqlg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bi6q3"]
 texture = ExtResource("4_hxcog")
@@ -1945,6 +1947,13 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kt8t3"]
+bg_color = Color(0.50279427, 0.6136049, 0.7255695, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [node name="Node2D" type="Node2D" unique_id=1919603811]
 position = Vector2(-355, -177)
 script = ExtResource("1_v38iq")
@@ -2149,11 +2158,23 @@ theme_override_font_sizes/font_size = 27
 text = "Score:"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="CanvasLayer2" unique_id=567780496]
-offset_left = 1069.0
-offset_top = 17.0
-offset_right = 1125.0
-offset_bottom = 68.0
+[node name="Button" type="Panel" parent="CanvasLayer2" unique_id=515899006]
+offset_left = 1075.0
+offset_top = 6.999998
+offset_right = 1152.0461
+offset_bottom = 70.63496
+scale = Vector2(0.88001955, 0.88001955)
+theme_override_styles/panel = SubResource("StyleBoxFlat_kt8t3")
+
+[node name="CheckBox" type="TextureButton" parent="CanvasLayer2" unique_id=640135151]
+offset_left = 1090.0
+offset_top = 16.0
+offset_right = 3118.0
+offset_bottom = 2024.0
+scale = Vector2(0.019564802, 0.019564802)
+toggle_mode = true
+texture_normal = ExtResource("58_kt8t3")
+texture_pressed = ExtResource("59_6dqlg")
 
 [node name="Transitionscreen" parent="." unique_id=1972415330 instance=ExtResource("41_lslib")]
 visible = false
@@ -2173,5 +2194,6 @@ one_shot = true
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="body_entered" from="lavaaa" to="." method="_on_lavaaa_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="toggled" from="CanvasLayer2/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="timeout" from="Transitionscreen/Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Transitionscreen/Timer" to="Area2D" method="_on_timer_timeout"]
