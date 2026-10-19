@@ -27,3 +27,6 @@ Run into enemy - die
 
 <h2>Screenshots</h2>
 Here are some screenshots of the game!
+<img width="1912" height="1066" alt="Screenshot 2026-10-19 151311" src="https://github.com/user-attachments/assets/9a845459-4f87-42ff-8374-658e34eb8a94" />
+<img width="1916" height="1078" alt="Screenshot 2026-10-19 151317" src="https://github.com/user-attachments/assets/60a6e093-10f5-46e7-ab69-47dc03f090a4" />
+<img width="1917" height="1078" alt="Screenshot 2026-10-19 151441" src="https://github.com/user-attachments/assets/5c86d2dd-e7da-479d-aafe-ec63b9da8060" />
