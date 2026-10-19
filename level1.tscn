@@ -2138,10 +2138,11 @@ volume_db = 0.278
 [node name="Panel" type="Panel" parent="CanvasLayer2" unique_id=1037534489]
 anchors_preset = -1
 anchor_right = 0.0069444445
-offset_left = 24.0
-offset_top = 27.0
-offset_right = 140.0
-offset_bottom = 72.0
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 128.99994
+offset_bottom = 53.0
+scale = Vector2(1.2281151, 1.2281151)
 theme_override_styles/panel = SubResource("StyleBoxFlat_ycl4i")
 metadata/_edit_use_anchors_ = true
 
